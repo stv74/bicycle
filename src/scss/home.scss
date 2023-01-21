@@ -1,3 +1,27 @@
-//====================================================================================================
+.page {
+  &__promo {
+    background: url(@img/Promo_img.jpg) center / cover no-repeat;
+  }
+}
 
-//====================================================================================================
+.newgen {
+  @include adaptiveValue("padding-top", 117, 40);
+  @include adaptiveValue("padding-bottom", 142, 40);
+  background-color: #f7f7f7;
+  // &__container {}
+
+  &__icon {
+    text-align: center;
+    margin-bottom: em(34, 16);
+  }
+  &__title {
+    margin-bottom: em(35, 18);
+  }
+  &__text {
+    text-align: center;
+    &:not(:last-child) {
+      margin-bottom: em(20, 18);
+    }
+  }
+}
+

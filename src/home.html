@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-	@@include('html/_head.htm',{
-	"title":"HomePage"
-	})
+	@@include('html/_head.htm',{ "title":"YEBO_Bicycle" })
 	<body>
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
 			<main class="page">
+				<div class="page__promo" data-fullscreen></div>
+				<section class="page__newgen newgen">
+					<div class="newgen__container">
+						<div class="newgen__icon">
+							<img src="@img/icons/newgen.png" alt="New generation" />
+						</div>
+						<h1 class="newgen__title title">A new generation of vintage bike</h1>
+						<div class="newgen__text text">
+							Lorem Ipsum is simply dummy text of the printing and typesetting
+							industry. Lorem Ipsum has been the industry's standard dummy text ever
+							since the 1500s, when an unknown printer took a galley of type and
+							scrambled it to make a type specimen book. It has survived not only five
+							centuries, but also the leap into electronic typesetting, remaining
+							essentially unchanged.
+						</div>
+					</div>
+				</section>
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>

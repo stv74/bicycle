@@ -1,1 +1,17 @@
-// Заголовки, загальні БЕМ блоки та інше...
+.title {
+  font-size: rem(18);
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: $secondColor;
+  text-align: center;
+}
+
+.text {
+  font-size: rem(18);
+  line-height: math.div(34, 18);
+  font-weight: 400;
+  color: $mainColor;
+  text-align: justify;  
+}
