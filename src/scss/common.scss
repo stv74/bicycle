@@ -1,17 +1,51 @@
-.title {
-  font-size: rem(18);
-  line-height: 1.2;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  color: $secondColor;
-  text-align: center;
+.block {
+  &__icon {
+    text-align: center;
+    margin-bottom: rem(30);
+    &_ng {
+      margin-bottom: rem(34);
+    }
+  }
+  &__title {
+    font-size: rem(18);
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: $secondColor;
+    text-align: center;
+    margin-bottom: rem(26);
+    &_ng {
+      margin-bottom: rem(35);
+    }
+  }
+  &__text {
+    font-size: rem(16);
+    line-height: math.div(30, 16);
+    font-weight: 400;
+    color: $mainColor;
+    text-align: justify;
+    &::after {
+      content: '';
+      display: block;
+      width: rem(50);
+      height: 1px;
+      background-color: rgba(53, 55, 56, 0.2);
+      margin: rem(40) auto 0 auto;
+      @media (max-width: em(1500)) {
+        margin: rem(15) auto 0 auto;
+      }
+    }
+    &_ng {
+      font-size: rem(18);
+      line-height: math.div(34, 18);
+      text-align: center;
+      &::after {
+        display: none;
+      }
+    }
+  }
 }
 
-.text {
-  font-size: rem(18);
-  line-height: math.div(34, 18);
-  font-weight: 400;
-  color: $mainColor;
-  text-align: justify;  
-}
+
+

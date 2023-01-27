@@ -5,11 +5,9 @@
 }
 
 .newgen {
-  @include adaptiveValue("padding-top", 117, 40);
-  @include adaptiveValue("padding-bottom", 142, 40);
+  @include adaptiveValue("padding-top", 117, 40, 0, 1500);
+  @include adaptiveValue("padding-bottom", 142, 40, 0, 1500);
   background-color: #f7f7f7;
-  // &__container {}
-
   &__icon {
     text-align: center;
     margin-bottom: em(34, 16);
@@ -24,4 +22,93 @@
     }
   }
 }
+
+.brands {
+  &__row {
+    position: relative;
+    display: flex;
+    @media (max-width: em(1100)){
+      flex-direction: column;
+    }    
+  }
+
+  &__column {
+    flex: 0 1 33.333%;
+    &_big {
+      flex: 0 1 66.667%;
+    }
+    @media (max-width: em(1100)){
+      .brands__row_last &:nth-child(1) {
+        order: 2;
+      }
+      .brands__row_last &:nth-child(2) {
+        order: 1;
+      }
+      .brands__row_last &:nth-child(3) {
+        order: 3;
+      }
+    }
+  }
+
+  &__content {
+    padding: rem(70) rem(68) rem(54);
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 10px solid #fff;
+      z-index: 5;
+    }
+    @media (max-width: em(1500)){
+      padding: rem(40) rem(35) rem(30);
+    }
+  }
+  &__img-ibg {
+    padding: 0px 0px 37.51% 0px;
+  }
+}
+
+.item-brands {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+  &__logo {
+    display: inline-block;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background-color: rgba(100, 194, 158, 0.5);
+    transition: all 0.3s ease 0s;
+    opacity: 0;
+    visibility: hidden;
+  }
+  &:hover &__logo {
+    opacity: 1;
+    visibility: visible;
+  }
+  &__img-ibg {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    @media (max-width: em(1100)) {
+      padding-bottom: 70%;    
+    }
+  }
+}
+
 
