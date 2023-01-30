@@ -4,6 +4,7 @@
   }
 }
 
+// Section "New Generation"
 .newgen {
   @include adaptiveValue("padding-top", 117, 40, 0, 1500);
   @include adaptiveValue("padding-bottom", 142, 40, 0, 1500);
@@ -23,6 +24,7 @@
   }
 }
 
+// Section "Brands"
 .brands {
   &__row {
     position: relative;
@@ -31,7 +33,6 @@
       flex-direction: column;
     }    
   }
-
   &__column {
     flex: 0 1 33.333%;
     &_big {
@@ -49,7 +50,6 @@
       }
     }
   }
-
   &__content {
     padding: rem(70) rem(68) rem(54);
     position: relative;
@@ -111,4 +111,53 @@
   }
 }
 
+// Section "Slider"
+.slider {
+  @include adaptiveValue("padding-top", 120, 50);
+  @include adaptiveValue("padding-bottom", 60, 30);
+  background-color: #f7f7f7;
+}
+
+.swiper-slide {
+  &__icon {
+    margin-bottom: rem(35);
+    text-align: center;
+  }
+  &__title {
+    font-size: rem(18);
+    font-weight: 700;
+    color: $secondColor;
+    text-align: center;
+    margin-bottom: rem(20);
+    span {
+      font-weight: 300;
+      color: $mainColor;
+    }
+  }
+  &__text {
+    font-size: rem(24);
+    font-style: italic;
+    line-height: math.div(34,24);
+    text-align: center;
+  }
+}
+
+.swiper-pagination {
+  display: flex;
+  justify-content: center;
+  @include adaptiveValue("margin-top", 100, 30);
+  margin: rem(100) 0 0 0;
+  &-bullet {
+    display: block;
+    margin: 0 rem(5);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid #c8c8c8;
+    cursor: pointer;
+    &-active {
+      background-color: #a9afb3;
+    }
+  }
+}
 
